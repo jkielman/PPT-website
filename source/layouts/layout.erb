@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+  <head>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta charset="utf-8">
+    <meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+
+    <title><%= current_page.data.title || "PPT - People. Places. Things." %></title>
+
+    <%= stylesheet_link_tag :site %>
+    <script src="https://use.typekit.net/ead8pzn.js"></script>
+    <script>try{Typekit.load({ async: true });}catch(e){}</script>
+
+
+  </head>
+
+  <body class="<%= page_classes %>">
+    <%= yield %>
+  </body>
+      <script data-cfasync="false" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+      <%= javascript_include_tag :all %>
+</html>

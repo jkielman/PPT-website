@@ -1,0 +1,36 @@
+%header.l-module
+	.inner
+		#logo
+			%a.appicon{:href=>"/", :alt=>"People. Places. Things."}
+				%img{:src=>"images/app-icon@2x.png", :alt=>"People. Places. Things."}
+		%a.title{:href=>"/", :alt=>"People. Places. Things."}
+			%span.blue People.
+			%span.yellow Places.
+			%span.red Things.
+			%span.sm.grey for iPhone
+
+		%a.contact{:href=>"https://twitter.com/pptapp_", :alt=>"App Store Link"}  Feedback
+%main
+	.container
+		%h1 Your city rediscovered
+		%h3 If the following checks out, we'll send you an invite.
+		%p{:id => "result"}
+		%form{:id => "myForm"}
+			%input{:type => "text", :placeholder => "Email", :name => "email", :id => "email"}
+			%br
+
+			%input{:type => "text", :placeholder => "Your twitter name:", :name => "tname", :id => "tname"}
+			%br
+
+			%input{:type => "text", :placeholder => "Your twitter friend on PPT:", :name => "tfriend", :id => "tfriend"}
+			%br
+
+			%input{:type => "submit", :value => "Request Invite", :class => "button"}
+
+%footer
+	%img{:src=>"images/logo@2x.png", :alt=>"People. Places. Things."}
+	%br
+	%a{:href=>"/terms", :alt=>"Terms &amp; Conditions"}  Terms &amp; Conditions
+	| &copy; Copyright 2016
+
+
