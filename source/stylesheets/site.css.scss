@@ -16,14 +16,21 @@ body {
   font-style: normal;
   font-weight: 300;
   font-size: 1em;
+  text-align: center;
 }
 
 img {
   width:100%;
 }
 
-a { text-decoration: none; color:$white;
-  		&:hover {  text-decoration: underline; }
+
+
+a { color:$white; text-decoration: underline;
+      &:hover {  text-decoration: none; }
+      &.title {text-decoration:none;}
+      &.title {text-decoration:none;}
+
+
 }
 
 span {
@@ -54,16 +61,16 @@ header {background:$lightblk; width:100%; border-bottom:$solidblk 1px solid;
     }
   }
   img {width:50px;  }
-  		.title { font-size:12px;  margin-left: 15px;
-
-    @media all and (min-width: 39.8em){ font-size:1.5em;  }
 
 
-      }
+
+
   	a {
 
   		&:hover {text-decoration:none;}
-  		&.contact {margin-left:auto; color: $grey; border:1px $grey solid; border-radius:5px; padding:5px 15px;
+  		&.contact {margin-left:auto; color: $grey; border:1px $grey solid; border-radius:5px; padding:5px 15px; text-decoration:none;
+        &.title{ text-decoration:none;}
+
   		}
 
   	}
@@ -72,19 +79,20 @@ header {background:$lightblk; width:100%; border-bottom:$solidblk 1px solid;
 main {background: -moz-linear-gradient(top,  rgba(20,21,23,1) 23%, rgba(20,21,23,1) 41%, rgba(20,21,23,0) 86%, rgba(20,21,23,0) 100%);
 background: -webkit-linear-gradient(top,  rgba(20,21,23,1) 23%,rgba(20,21,23,1) 41%,rgba(20,21,23,0) 86%,rgba(20,21,23,0) 100%);
 background: linear-gradient(to bottom,  rgba(20,21,23,1) 23%,rgba(20,21,23,1) 41%,rgba(20,21,23,0) 86%,rgba(20,21,23,0) 100%);
-
+#logo { width:150px; margin:25px auto;}
   .container {
     width:90%;
     padding:50px 0;
     margin:0 5%;
-    @media all and (min-width: 39.8em){  margin:0 auto;  max-width: 350px;}
+    @media all and (min-width: 39.8em){  margin:0 auto;  max-width: 460px;}
   }
 
 
 }
 
+
 //form
-form { background:$lightblk; padding:25px; border-radius:25px;  }
+form { background:$lightblk; padding:25px; border-radius:25px;   max-width: 350px; margin:35px auto;}
 input[type=text] {
     width: 100%;
     padding: 15px 20px;

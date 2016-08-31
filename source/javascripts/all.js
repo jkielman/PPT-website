@@ -18,7 +18,14 @@ jQuery( document ).ready(function( $ ) {
         $inputs.prop("disabled", true);
        $('h1').fadeOut(),$('h3').fadeOut(),$('form').fadeOut();
 
+
+
         $('#result').text('Loading...');
+        if((navigator.userAgent.match(/iPhone/i)) || (navigator.userAgent.match(/iPod/i))) {
+	    $('#result').html('Thank you for your interest. We will send you an invite as soon as we can.<br><br><br>PPT works best with friends. <a href="http://twitter.com/home?status=Check%20out%20@pptapp%20http://pptapp.io/">Let them know.</a>');
+}
+
+
 
         request = $.ajax({
       url: "https://script.google.com/macros/s/AKfycbz2MYGP3AWY8ms7qOzofR07Eh47phtS3ZONm06cbNwyhstPvuSe/exec",  // clone
@@ -26,11 +33,13 @@ jQuery( document ).ready(function( $ ) {
             data: serializedData
         });
 
+
+
         request.done(function (response, textStatus, jqXHR){
 
 
 
-           $('#result').html('Thank you for your interest. We will send you an invite as soon as we can.<br><br><br>PPT works best with friends. <a href="http://twitter.com/home?status=Check%20out%20@pptapp%20http://pptapp.io/">Let them know.</a>');
+        $('#result').html('Thank you for your interest. We will send you an invite as soon as we can.<br><br><br>PPT works best with friends. <a href="http://twitter.com/home?status=Check%20out%20@pptapp%20http://pptapp.io/">Let them know.</a>');
 
 
         });
